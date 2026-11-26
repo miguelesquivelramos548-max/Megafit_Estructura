@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Megait_estructura" default="default" basedir=".">
+    <description>Construcción del proyecto Megait_estructura (MegaFit Gym) en NetBeans.</description>
+    <import file="nbproject/build-impl.xml" optional="true"/>
+    <target name="default" depends="compile">
+        <echo message="Megait_estructura compilado exitosamente."/>
+    </target>
+    <target name="compile">
+        <mkdir dir="build/classes"/>
+        <javac srcdir="src" destdir="build/classes" includeantruntime="false" encoding="UTF-8"/>
+    </target>
+    <target name="run" depends="compile">
+        <java classname="com.megafit.Main" classpath="build/classes" fork="true"/>
+    </target>
+    <target name="clean">
+        <delete dir="build"/>
+        <delete dir="dist"/>
+    </target>
+</project>
